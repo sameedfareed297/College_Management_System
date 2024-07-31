@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8FFC5A4-0E7C-42AD-A1CB-7DAACD3F9CFB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsForm</RootNamespace>
+    <AssemblyName>WindowsForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.33\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutus.Designer.cs">
+      <DependentUpon>aboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollegeRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollegeRules.Designer.cs">
+      <DependentUpon>CollegeRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComCourses.Designer.cs">
+      <DependentUpon>ComCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CsCourse.Designer.cs">
+      <DependentUpon>CsCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashbord.Designer.cs">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelStudentID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelStudentID.Designer.cs">
+      <DependentUpon>DelStudentID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eligibile_criteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eligibile_criteria.Designer.cs">
+      <DependentUpon>eligibile_criteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fee_structure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fee_structure.Designer.cs">
+      <DependentUpon>fee_structure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fields_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fields_courses.Designer.cs">
+      <DependentUpon>fields_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_addmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_addmission.Designer.cs">
+      <DependentUpon>new_addmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE-MED.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE-MED.Designer.cs">
+      <DependentUpon>PRE-MED.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreEng.Designer.cs">
+      <DependentUpon>PreEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffData.Designer.cs">
+      <DependentUpon>StaffData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_RegistrstionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_RegistrstionForm.Designer.cs">
+      <DependentUpon>student_RegistrstionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aboutus.resx">
+      <DependentUpon>aboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollegeRules.resx">
+      <DependentUpon>CollegeRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComCourses.resx">
+      <DependentUpon>ComCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CsCourse.resx">
+      <DependentUpon>CsCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashbord.resx">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelStudentID.resx">
+      <DependentUpon>DelStudentID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eligibile_criteria.resx">
+      <DependentUpon>eligibile_criteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fee_structure.resx">
+      <DependentUpon>fee_structure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fields_courses.resx">
+      <DependentUpon>fields_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_addmission.resx">
+      <DependentUpon>new_addmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE-MED.resx">
+      <DependentUpon>PRE-MED.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreEng.resx">
+      <DependentUpon>PreEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StaffData.resx">
+      <DependentUpon>StaffData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_RegistrstionForm.resx">
+      <DependentUpon>student_RegistrstionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\college_logo2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\studentl.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STAFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STAFF2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courses2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courses3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eligible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_button.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrnd.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bckgrnd.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrnd1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrnd2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrnd3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrnd4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newadmission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fieldscourses.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fieldscourse.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fieldscour.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fields.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fieldss.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removestuden.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutus.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutus1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutus2.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
